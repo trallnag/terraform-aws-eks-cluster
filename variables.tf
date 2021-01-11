@@ -180,3 +180,12 @@ variable "cluster_encryption_config_resources" {
   default     = ["secrets"]
   description = "Cluster Encryption Config Resources to encrypt, e.g. ['secrets']"
 }
+
+variable "map_additional_assume_role_principals" {
+  description = "List of principals that should be added the assume role policy document."
+  type = list(object({
+    type        = string
+    identifiers = list(string)
+  }))
+  default = []
+}
