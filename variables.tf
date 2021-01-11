@@ -182,7 +182,7 @@ variable "cluster_encryption_config_resources" {
 }
 
 variable "map_additional_assume_role_principals" {
-  description = "List of principals that should be added the assume role policy document."
+  description = "List of principals that should be added to the assume role policy document."
   type = list(object({
     type        = string
     identifiers = list(string)
